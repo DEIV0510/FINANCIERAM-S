@@ -23,6 +23,22 @@
     /* -------- Año footer -------- */
     var y = $('#year'); if (y) y.textContent = new Date().getFullYear();
 
+    /* -------- Preloader: contador de porcentaje -------- */
+    var prePct = $('#prePct');
+    if (prePct) {
+      if (reduceMotion) {
+        prePct.textContent = '100';
+      } else {
+        var pStart = null, pDur = 1300;
+        requestAnimationFrame(function pStep(ts) {
+          if (!pStart) pStart = ts;
+          var p = Math.min((ts - pStart) / pDur, 1);
+          prePct.textContent = Math.round(p * 100);
+          if (p < 1) requestAnimationFrame(pStep);
+        });
+      }
+    }
+
     /* -------- Sincronizar enlaces de WhatsApp -------- */
     $$('a[href^="https://wa.me/"]').forEach(function (a) {
       a.href = 'https://wa.me/' + WHATSAPP;

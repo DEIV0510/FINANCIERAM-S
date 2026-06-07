@@ -70,9 +70,18 @@
 
   <!-- ============ PRELOADER ============ -->
   <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader__bg" aria-hidden="true">
+      <div class="preloader__grid"></div>
+      <div class="preloader__glow"></div>
+    </div>
     <div class="preloader__mark">
-      <img class="preloader__logo" src="assets/logo-light.png" alt="Asesoría Financiera M&amp;S" width="240" />
+      <div class="preloader__logo-wrap">
+        <div class="preloader__rings"><span></span><span></span><span></span></div>
+        <img class="preloader__logo" src="assets/logo-light.png" alt="Asesoría Financiera M&amp;S" />
+        <span class="preloader__shine"></span>
+      </div>
       <div class="preloader__line"><span></span></div>
+      <div class="preloader__pct"><b id="prePct">0</b>%</div>
     </div>
   </div>
 
