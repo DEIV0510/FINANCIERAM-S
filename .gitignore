@@ -8,9 +8,12 @@ desktop.ini
 .idea/
 *.swp
 
-# Node
+# Node / herramientas de build (no son parte del sitio estático)
 node_modules/
 npm-debug.log*
+package.json
+package-lock.json
+process-logo.js
 
 # Logs y temporales
 *.log

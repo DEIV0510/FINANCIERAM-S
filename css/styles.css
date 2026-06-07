@@ -80,19 +80,15 @@ ul{ list-style:none; }
   transition:opacity .7s var(--ease), visibility .7s;
 }
 .preloader.is-done{ opacity:0; visibility:hidden; }
-.preloader__mark{ text-align:center; color:var(--gold); }
-.preloader__emblem{ width:64px; height:64px; margin:0 auto 18px; color:var(--gold);
-  animation:emblemIn 1s var(--ease) both; }
-.preloader__word{
-  font-family:var(--serif); font-size:46px; font-weight:600; letter-spacing:.04em;
-  color:var(--ivory); line-height:1;
-}
-.preloader__word span{ color:var(--gold); font-style:italic; margin:0 .04em; }
-.preloader__line{ width:120px; height:2px; background:rgba(255,255,255,.12); margin:16px auto 12px; overflow:hidden; }
+.preloader__mark{ text-align:center; }
+.preloader__card{ display:inline-block; background:var(--ivory); border-radius:22px; padding:32px 40px;
+  border:1px solid rgba(194,161,90,.35); box-shadow:0 40px 90px -30px rgba(0,0,0,.7);
+  animation:cardIn 1s var(--ease) both; }
+.preloader__card img{ width:180px; height:auto; display:block; }
+.preloader__line{ width:140px; height:2px; background:rgba(255,255,255,.14); margin:26px auto 0; overflow:hidden; }
 .preloader__line span{ display:block; height:100%; width:100%; background:linear-gradient(90deg,var(--gold-deep),var(--gold-bright));
   transform:translateX(-100%); animation:loadBar 1.4s var(--ease) .2s forwards; }
-.preloader__tag{ font-size:11px; letter-spacing:.42em; color:rgba(246,242,234,.5); text-transform:uppercase; padding-left:.42em; }
-@keyframes emblemIn{ from{ opacity:0; transform:translateY(10px) scale(.9) rotate(-8deg);} to{ opacity:1; transform:none;} }
+@keyframes cardIn{ from{ opacity:0; transform:translateY(14px) scale(.94);} to{ opacity:1; transform:none;} }
 @keyframes loadBar{ to{ transform:translateX(0);} }
 
 /* =========================================================
@@ -151,8 +147,10 @@ ul{ list-style:none; }
 
 /* Brand */
 .brand{ display:inline-flex; align-items:center; gap:12px; }
-.brand__emblem{ width:42px; height:42px; color:var(--gold); transition:transform .6s var(--ease); }
-.brand:hover .brand__emblem{ transform:rotate(8deg) scale(1.05); }
+.brand__logo{ width:46px; height:46px; flex:none; border-radius:12px; background:var(--ivory); padding:5px;
+  display:grid; place-items:center; box-shadow:inset 0 0 0 1px rgba(194,161,90,.3); transition:transform .5s var(--ease), box-shadow .5s; }
+.brand__logo img{ width:100%; height:100%; object-fit:contain; }
+.brand:hover .brand__logo{ transform:scale(1.05); box-shadow:inset 0 0 0 1px rgba(194,161,90,.55); }
 .brand__text{ display:flex; flex-direction:column; line-height:1; }
 .brand__name{ font-family:var(--serif); font-size:25px; font-weight:600; color:var(--ivory); letter-spacing:.02em; }
 .brand__name i{ color:var(--gold); font-style:italic; }
@@ -539,8 +537,10 @@ input[type=range]::-moz-range-thumb{ width:24px; height:24px; border-radius:50%;
    RESPONSIVE
    ========================================================= */
 @media (max-width:1024px){
-  .hero__inner{ grid-template-columns:1fr; gap:48px; }
-  .hero__card{ max-width:460px; }
+  .hero__inner{ grid-template-columns:1fr; gap:40px; }
+  /* En móvil/tablet la tarjeta del modelo va primero: se entiende de inmediato de qué es la empresa */
+  .hero__card{ order:-1; max-width:480px; width:100%; margin-inline:auto; }
+  .hero__content{ text-align:left; }
   .why__grid{ grid-template-columns:repeat(2,1fr); }
   .asset-grid{ grid-template-columns:repeat(3,1fr); }
   .testi__grid{ grid-template-columns:1fr; max-width:620px; margin-inline:auto; }
