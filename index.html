@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#081523" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <title>Asesoría Financiera M&amp;S | Crédito con garantía hipotecaria e inversión con respaldo inmobiliario</title>
+  <meta name="description" content="En M&S conectamos a quienes necesitan liquidez con quienes buscan invertir, usando la finca raíz como respaldo. Crédito con garantía hipotecaria e inversión en hipotecas con acompañamiento legal y total confidencialidad." />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Asesoría Financiera M&S" />
+  <meta property="og:description" content="Crédito con garantía hipotecaria e inversión con respaldo inmobiliario." />
+  <meta property="og:locale" content="es_CO" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ============ SVG SPRITE (iconos + emblema) ============ -->
+  <svg aria-hidden="true" focusable="false" style="position:absolute;width:0;height:0;overflow:hidden" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <!-- Emblema del logo M&S: anillo + barras ascendentes (crecimiento/patrimonio) + remate diamante -->
+      <symbol id="ms-emblem" viewBox="0 0 64 64">
+        <circle cx="32" cy="32" r="29" fill="none" stroke="currentColor" stroke-width="1.4" opacity="0.55"/>
+        <circle cx="32" cy="32" r="23.5" fill="none" stroke="currentColor" stroke-width="0.8" opacity="0.25"/>
+        <!-- barras ascendentes -->
+        <path d="M22 40 L22 34" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+        <path d="M28 40 L28 30" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+        <path d="M34 40 L34 25" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+        <path d="M40 40 L40 20" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+        <!-- línea de techo / tendencia -->
+        <path d="M20 30 L31 22 L42 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+        <!-- diamante remate -->
+        <path d="M42 13.5 l2.4 2.4 -2.4 2.4 -2.4 -2.4 z" fill="currentColor"/>
+      </symbol>
+
+      <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-key" viewBox="0 0 24 24"><circle cx="8" cy="8" r="4.2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M11 11l8 8m-3 0l3-3m-6 0l2 2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-growth" viewBox="0 0 24 24"><path d="M4 18L10 12l3 3 7-8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 7h5v5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-rate" viewBox="0 0 24 24"><path d="M4 7 L10 13 L13 10 L20 17" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 17 L15 17 M20 17 L20 12" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-home" viewBox="0 0 24 24"><path d="M4 11l8-6 8 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 10v9h12v-9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 19v-5h4v5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+      <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8 11V8a4 4 0 018 0v3" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="15.5" r="1.4" fill="currentColor"/></symbol>
+      <symbol id="i-scale" viewBox="0 0 24 24"><path d="M12 4v16M7 20h10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M5 7h14M5 7l-2.5 5a3 3 0 005 0L5 7zm14 0l-2.5 5a3 3 0 005 0L19 7z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 5l3-1 3 1" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 7.5V12l3 2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-doc" viewBox="0 0 24 24"><path d="M7 3h7l4 4v14H7z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M14 3v4h4M9.5 12h5M9.5 15.5h5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+      <symbol id="i-handshake" viewBox="0 0 24 24"><path d="M3 8l4-2 5 3 5-3 4 2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M7 6v7m10-7v7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M7 13l3 3 2-1.5 2 1.5 3-3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 4v16h16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><rect x="8" y="11" width="2.6" height="6" fill="currentColor"/><rect x="13" y="8" width="2.6" height="9" fill="currentColor"/><rect x="18" y="6" width="2.6" height="11" fill="currentColor" opacity="0.5"/></symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6 3h3l1.5 5-2 1.5a12 12 0 006 6l1.5-2 5 1.5v3a2 2 0 01-2 2A16 16 0 014 5a2 2 0 012-2z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+      <symbol id="i-whatsapp" viewBox="0 0 24 24"><path d="M12 3a9 9 0 00-7.8 13.5L3 21l4.7-1.2A9 9 0 1012 3z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 8.5c0 3 2.5 5.5 5.5 5.5.6 0 1-.5 1-1l-.2-1.2-1.8-.6-.8.9c-1-.4-1.8-1.2-2.2-2.2l.9-.8-.6-1.8L10.5 7c-.5 0-1 .4-1 1z" fill="currentColor"/></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3.5" y="5.5" width="17" height="13" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M4 7l8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6 7-11a7 7 0 10-14 0c0 5 7 11 7 11z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.4" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-quote" viewBox="0 0 24 24"><path d="M10 7c-3 1-4.5 3.2-4.5 6.5V18h5v-5H7.5c0-2 .9-3.4 2.5-4L10 7zm9 0c-3 1-4.5 3.2-4.5 6.5V18h5v-5h-3c0-2 .9-3.4 2.5-4L19 7z" fill="currentColor"/></symbol>
+      <symbol id="i-building" viewBox="0 0 24 24"><path d="M5 21V5l7-2v18M19 21v-9l-7-2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 8h1m-1 3h1m-1 3h1m6 0h1m-1 3h1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+      <symbol id="i-store" viewBox="0 0 24 24"><path d="M4 9l1-4h14l1 4M4 9v11h16V9M4 9h16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 20v-6h6v6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+      <symbol id="i-land" viewBox="0 0 24 24"><path d="M3 20h18M5 20l4-9 4 5 2-3 4 7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-warehouse" viewBox="0 0 24 24"><path d="M3 20V8l9-4 9 4v12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><rect x="7" y="12" width="10" height="8" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M7 15h10" stroke="currentColor" stroke-width="1.6"/></symbol>
+    </defs>
+  </svg>
+
+  <!-- ============ PRELOADER ============ -->
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader__mark">
+      <svg class="preloader__emblem" viewBox="0 0 64 64"><use href="#ms-emblem"></use></svg>
+      <div class="preloader__word">M<span>&amp;</span>S</div>
+      <div class="preloader__line"><span></span></div>
+      <div class="preloader__tag">ASESORÍA FINANCIERA</div>
+    </div>
+  </div>
+
+  <!-- ============ PROGRESS BAR ============ -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- ============ HEADER ============ -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#inicio" class="brand" aria-label="Asesoría Financiera M&S — inicio">
+        <svg class="brand__emblem" viewBox="0 0 64 64"><use href="#ms-emblem"></use></svg>
+        <span class="brand__text">
+          <span class="brand__name">M<i>&amp;</i>S</span>
+          <span class="brand__sub">Asesoría Financiera</span>
+        </span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Navegación principal">
+        <a href="#soluciones" class="nav__link">Soluciones</a>
+        <a href="#proceso" class="nav__link">Cómo funciona</a>
+        <a href="#porque" class="nav__link">Por qué M&amp;S</a>
+        <a href="#calculadora" class="nav__link">Simulador</a>
+        <a href="#faq" class="nav__link">Preguntas</a>
+      </nav>
+
+      <a href="#contacto" class="btn btn--gold btn--sm header__cta">
+        <span>Agenda tu asesoría</span>
+        <svg class="ico"><use href="#i-arrow"></use></svg>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileNav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile nav -->
+  <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+    <nav class="mobile-nav__links">
+      <a href="#soluciones">Soluciones</a>
+      <a href="#proceso">Cómo funciona</a>
+      <a href="#porque">Por qué M&amp;S</a>
+      <a href="#calculadora">Simulador</a>
+      <a href="#faq">Preguntas</a>
+      <a href="#contacto" class="btn btn--gold">Agenda tu asesoría</a>
+    </nav>
+  </div>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="inicio">
+      <div class="hero__bg" aria-hidden="true">
+        <div class="hero__aurora"></div>
+        <div class="hero__glow hero__glow--1"></div>
+        <div class="hero__glow hero__glow--2"></div>
+        <div class="hero__grid"></div>
+      </div>
+
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <p class="eyebrow reveal" data-reveal>
+            <span class="eyebrow__dot"></span>
+            Asesoría financiera · Respaldo inmobiliario
+          </p>
+
+          <h1 class="hero__title reveal" data-reveal data-reveal-delay="80">
+            Crédito con <em>garantía</em>.<br />
+            Inversión con <em>respaldo</em>.
+          </h1>
+
+          <p class="hero__lead reveal" data-reveal data-reveal-delay="160">
+            <strong>¿Necesitas dinero?</strong> Te prestamos dejando tu inmueble como garantía,
+            con el <strong>interés más bajo del mercado</strong>. <strong>¿Tienes capital?</strong>
+            Lo colocamos en hipotecas con respaldo real para que rente. En M&amp;S conectamos
+            ambos lados con acompañamiento legal y total confidencialidad.
+          </p>
+
+          <div class="hero__actions reveal" data-reveal data-reveal-delay="240">
+            <a href="#credito" class="btn btn--gold btn--lg">
+              <svg class="ico"><use href="#i-key"></use></svg>
+              <span>Necesito un crédito</span>
+            </a>
+            <a href="#inversion" class="btn btn--ghost btn--lg">
+              <svg class="ico"><use href="#i-growth"></use></svg>
+              <span>Quiero invertir</span>
+            </a>
+          </div>
+
+          <ul class="hero__chips reveal" data-reveal data-reveal-delay="320">
+            <li><svg class="ico"><use href="#i-rate"></use></svg> Interés más bajo del mercado</li>
+            <li><svg class="ico"><use href="#i-home"></use></svg> Sin vender tu inmueble</li>
+            <li><svg class="ico"><use href="#i-lock"></use></svg> Confidencialidad total</li>
+          </ul>
+        </div>
+
+        <!-- Glass card visual -->
+        <aside class="hero__card reveal" data-reveal data-reveal-delay="200" aria-label="Resumen de patrimonio">
+          <div class="gcard">
+            <div class="gcard__top">
+              <span class="gcard__label">El modelo M&amp;S</span>
+              <svg class="ico gcard__brand"><use href="#ms-emblem"></use></svg>
+            </div>
+
+            <div class="model">
+              <div class="model__row">
+                <div class="model__icon"><svg class="ico"><use href="#i-key"></use></svg></div>
+                <div class="model__txt">
+                  <span class="model__k">Necesitas dinero</span>
+                  <span class="model__v">Te prestamos dejando tu inmueble en garantía</span>
+                </div>
+              </div>
+              <div class="model__row">
+                <div class="model__icon"><svg class="ico"><use href="#i-growth"></use></svg></div>
+                <div class="model__txt">
+                  <span class="model__k">Tienes dinero</span>
+                  <span class="model__v">Lo inviertes en hipotecas con respaldo real</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="gcard__highlight">
+              <svg class="ico"><use href="#i-rate"></use></svg>
+              <span>El <strong>interés más bajo</strong> del mercado</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <a href="#soluciones" class="hero__scroll" aria-label="Ver soluciones">
+        <span></span>
+      </a>
+    </section>
+
+    <!-- ============ TRUST STRIP ============ -->
+    <section class="trust" aria-label="Valores de la compañía">
+      <div class="container trust__track" id="trustTrack">
+        <span><svg class="ico"><use href="#i-lock"></use></svg> Confidencialidad</span>
+        <span class="dot">·</span>
+        <span><svg class="ico"><use href="#i-scale"></use></svg> Acompañamiento legal</span>
+        <span class="dot">·</span>
+        <span><svg class="ico"><use href="#i-home"></use></svg> Respaldo en finca raíz</span>
+        <span class="dot">·</span>
+        <span><svg class="ico"><use href="#i-clock"></use></svg> Procesos ágiles</span>
+        <span class="dot">·</span>
+        <span><svg class="ico"><use href="#i-handshake"></use></svg> Trato cercano</span>
+        <span class="dot">·</span>
+        <span><svg class="ico"><use href="#i-shield"></use></svg> Transparencia total</span>
+      </div>
+    </section>
+
+    <!-- ============ DOS CAMINOS / SOLUCIONES ============ -->
+    <section class="section solutions" id="soluciones">
+      <div class="container">
+        <header class="section__head reveal" data-reveal>
+          <p class="eyebrow eyebrow--center"><span class="eyebrow__dot"></span>Dos caminos, un mismo respaldo</p>
+          <h2 class="section__title">Elige el lado de la mesa<br />en el que te encuentras</h2>
+          <p class="section__sub">Ya sea que necesites liquidez o que busques hacer crecer tu capital,
+            la finca raíz es la garantía que da seguridad a ambas partes.</p>
+        </header>
+
+        <div class="paths">
+          <!-- CRÉDITO -->
+          <article class="path reveal" id="credito" data-reveal>
+            <div class="path__icon"><svg class="ico"><use href="#i-key"></use></svg></div>
+            <span class="path__tag">Para quien necesita liquidez</span>
+            <h3 class="path__title">Crédito con garantía hipotecaria</h3>
+            <p class="path__text">
+              Obtén el dinero que necesitas dejando tu inmueble como garantía,
+              <strong>sin venderlo</strong> y conservando su uso. Una alternativa
+              ágil y discreta frente a la banca tradicional.
+            </p>
+            <ul class="path__list">
+              <li><svg class="ico"><use href="#i-check"></use></svg> El interés más bajo del mercado, pactado contigo</li>
+              <li><svg class="ico"><use href="#i-check"></use></svg> Montos según el avalúo de tu propiedad</li>
+              <li><svg class="ico"><use href="#i-check"></use></svg> Sigues siendo el dueño de tu inmueble</li>
+              <li><svg class="ico"><use href="#i-check"></use></svg> Estudiamos tu caso, sin importar tu historial</li>
+            </ul>
+            <a href="#contacto" class="btn btn--gold path__cta" data-interest="credito">
+              <span>Solicitar mi crédito</span><svg class="ico"><use href="#i-arrow"></use></svg>
+            </a>
+          </article>
+
+          <!-- Divisor -->
+          <div class="paths__divider" aria-hidden="true"><span>o</span></div>
+
+          <!-- INVERSIÓN -->
+          <article class="path path--invest reveal" id="inversion" data-reveal data-reveal-delay="120">
+            <div class="path__icon"><svg class="ico"><use href="#i-growth"></use></svg></div>
+            <span class="path__tag">Para quien tiene capital</span>
+            <h3 class="path__title">Inversión con respaldo inmobiliario</h3>
+            <p class="path__text">
+              ¿Tienes capital disponible? Lo colocamos en hipotecas seleccionadas
+              para que tu dinero genere <strong>rentabilidad</strong> mes a mes,
+              siempre respaldado por un bien raíz.
+            </p>
+            <ul class="path__list">
+              <li><svg class="ico"><use href="#i-check"></use></svg> Rentabilidad atractiva, respaldada por finca raíz</li>
+              <li><svg class="ico"><use href="#i-check"></use></svg> Contratos e hipotecas formalizados ante notaría</li>
+              <li><svg class="ico"><use href="#i-check"></use></svg> Acordamos monto, plazo y rentabilidad contigo</li>
+              <li><svg class="ico"><use href="#i-check"></use></svg> Estudio previo de cada garantía</li>
+            </ul>
+            <a href="#contacto" class="btn btn--dark path__cta" data-interest="inversion">
+              <span>Quiero invertir</span><svg class="ico"><use href="#i-arrow"></use></svg>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROCESO ============ -->
+    <section class="section process" id="proceso">
+      <div class="container">
+        <header class="section__head reveal" data-reveal>
+          <p class="eyebrow eyebrow--center"><span class="eyebrow__dot"></span>Cómo funciona</p>
+          <h2 class="section__title">Un proceso claro,<br />de la primera charla al desembolso</h2>
+          <p class="section__sub">Sin letra menuda. Te explicamos cada paso y solo avanzamos cuando tú estás seguro.</p>
+        </header>
+
+        <ol class="steps">
+          <li class="step reveal" data-reveal>
+            <span class="step__num">01</span>
+            <h3 class="step__title">Asesoría inicial</h3>
+            <p class="step__text">Conversamos sobre tu necesidad —crédito o inversión— y resolvemos tus dudas sin compromiso.</p>
+          </li>
+          <li class="step reveal" data-reveal data-reveal-delay="100">
+            <span class="step__num">02</span>
+            <h3 class="step__title">Estudio del inmueble</h3>
+            <p class="step__text">Analizamos la propiedad que servirá de garantía y verificamos su situación legal y avalúo.</p>
+          </li>
+          <li class="step reveal" data-reveal data-reveal-delay="200">
+            <span class="step__num">03</span>
+            <h3 class="step__title">Propuesta a la medida</h3>
+            <p class="step__text">Acordamos contigo monto, plazo y el interés más bajo del mercado, con total transparencia.</p>
+          </li>
+          <li class="step reveal" data-reveal data-reveal-delay="300">
+            <span class="step__num">04</span>
+            <h3 class="step__title">Firma y desembolso</h3>
+            <p class="step__text">Formalizamos ante notaría y realizamos el desembolso o la colocación de la inversión.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ POR QUÉ M&S ============ -->
+    <section class="section why" id="porque">
+      <div class="container">
+        <header class="section__head reveal" data-reveal>
+          <p class="eyebrow eyebrow--center"><span class="eyebrow__dot"></span>Por qué M&amp;S</p>
+          <h2 class="section__title">Respaldo y condiciones<br />que dan tranquilidad</h2>
+          <p class="section__sub">Trabajamos con el interés más bajo del mercado y acordamos las condiciones
+            directamente contigo, sin intermediarios y con respaldo legal en cada operación.</p>
+        </header>
+
+        <div class="why__grid">
+          <article class="feature reveal" data-reveal>
+            <div class="feature__icon"><svg class="ico"><use href="#i-scale"></use></svg></div>
+            <h3>Acompañamiento legal</h3>
+            <p>Cada operación se formaliza con abogados y ante notaría. Nada queda a la palabra.</p>
+          </article>
+          <article class="feature reveal" data-reveal data-reveal-delay="80">
+            <div class="feature__icon"><svg class="ico"><use href="#i-lock"></use></svg></div>
+            <h3>Confidencialidad</h3>
+            <p>Tu información y tu patrimonio se manejan con absoluta discreción y reserva.</p>
+          </article>
+          <article class="feature reveal" data-reveal data-reveal-delay="160">
+            <div class="feature__icon"><svg class="ico"><use href="#i-home"></use></svg></div>
+            <h3>Respaldo real</h3>
+            <p>Toda operación está respaldada por un bien inmueble debidamente estudiado.</p>
+          </article>
+          <article class="feature reveal" data-reveal data-reveal-delay="240">
+            <div class="feature__icon"><svg class="ico"><use href="#i-clock"></use></svg></div>
+            <h3>Procesos ágiles</h3>
+            <p>Menos trámites y tiempos de respuesta cortos frente a la banca tradicional.</p>
+          </article>
+        </div>
+
+        <div class="stats">
+          <div class="stat reveal" data-reveal>
+            <span class="stat__num"><b data-count="60" data-suffix="%">0</b></span>
+            <span class="stat__label">hasta del avalúo de tu inmueble</span>
+          </div>
+          <div class="stat reveal" data-reveal data-reveal-delay="80">
+            <span class="stat__num"><b data-count="100" data-suffix="%">0</b></span>
+            <span class="stat__label">operaciones con respaldo legal</span>
+          </div>
+          <div class="stat reveal" data-reveal data-reveal-delay="160">
+            <span class="stat__num"><b>$0</b></span>
+            <span class="stat__label">costo de tu asesoría inicial</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CALCULADORA ============ -->
+    <section class="section calc" id="calculadora">
+      <div class="container calc__inner">
+        <div class="calc__intro reveal" data-reveal>
+          <p class="eyebrow"><span class="eyebrow__dot"></span>Simulador</p>
+          <h2 class="section__title">Calcula tu crédito<br />en segundos</h2>
+          <p class="section__sub">Mueve el valor comercial de tu inmueble y observa el monto estimado al que
+            podrías acceder. Es una simulación referencial; la cifra final depende del estudio de tu propiedad.</p>
+
+          <ul class="calc__notes">
+            <li><svg class="ico"><use href="#i-check"></use></svg> Hasta el <strong>60%</strong> del avalúo comercial</li>
+            <li><svg class="ico"><use href="#i-check"></use></svg> El <strong>interés más bajo</strong> del mercado, pactado contigo</li>
+            <li><svg class="ico"><use href="#i-check"></use></svg> Conservas la propiedad de tu inmueble</li>
+          </ul>
+        </div>
+
+        <div class="calc__panel reveal" data-reveal data-reveal-delay="120">
+          <label class="calc__field">
+            <span class="calc__field-label">Valor comercial del inmueble</span>
+            <output class="calc__value" id="calcPropValue">$ 300.000.000</output>
+            <input type="range" id="calcProp" min="50000000" max="2000000000" step="10000000" value="300000000"
+              aria-label="Valor comercial del inmueble" />
+            <span class="calc__range-meta"><i>$ 50M</i><i>$ 2.000M</i></span>
+          </label>
+
+          <div class="calc__field">
+            <span class="calc__field-label">Porcentaje a financiar</span>
+            <div class="calc__pills" role="group" aria-label="Porcentaje a financiar">
+              <button type="button" class="calc__pill" data-ltv="40">40%</button>
+              <button type="button" class="calc__pill is-active" data-ltv="50">50%</button>
+              <button type="button" class="calc__pill" data-ltv="60">60%</button>
+            </div>
+          </div>
+
+          <div class="calc__result">
+            <span class="calc__result-label">Monto estimado de tu crédito</span>
+            <div class="calc__result-amount" id="calcResult">$ 150.000.000</div>
+            <div class="calc__bar"><span id="calcBar" style="width:50%"></span></div>
+          </div>
+
+          <a href="#contacto" class="btn btn--gold btn--block" data-interest="credito">
+            <span>Quiero una propuesta formal</span><svg class="ico"><use href="#i-arrow"></use></svg>
+          </a>
+          <p class="calc__disclaimer">* Cifra ilustrativa. No constituye una oferta vinculante.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ GARANTÍAS / INMUEBLES ============ -->
+    <section class="section assets-sec">
+      <div class="container">
+        <header class="section__head reveal" data-reveal>
+          <p class="eyebrow eyebrow--center"><span class="eyebrow__dot"></span>Garantías que aceptamos</p>
+          <h2 class="section__title">Casi cualquier inmueble<br />puede ser tu respaldo</h2>
+        </header>
+
+        <div class="asset-grid">
+          <div class="asset reveal" data-reveal><svg class="ico"><use href="#i-home"></use></svg><span>Casas</span></div>
+          <div class="asset reveal" data-reveal data-reveal-delay="60"><svg class="ico"><use href="#i-building"></use></svg><span>Apartamentos</span></div>
+          <div class="asset reveal" data-reveal data-reveal-delay="120"><svg class="ico"><use href="#i-store"></use></svg><span>Locales comerciales</span></div>
+          <div class="asset reveal" data-reveal data-reveal-delay="180"><svg class="ico"><use href="#i-warehouse"></use></svg><span>Bodegas</span></div>
+          <div class="asset reveal" data-reveal data-reveal-delay="240"><svg class="ico"><use href="#i-land"></use></svg><span>Lotes y terrenos</span></div>
+          <div class="asset reveal" data-reveal data-reveal-delay="300"><svg class="ico"><use href="#i-building"></use></svg><span>Oficinas</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TESTIMONIOS ============ -->
+    <section class="section testi">
+      <div class="container">
+        <header class="section__head reveal" data-reveal>
+          <p class="eyebrow eyebrow--center"><span class="eyebrow__dot"></span>Lo que dicen nuestros clientes</p>
+          <h2 class="section__title">Confianza construida<br />operación tras operación</h2>
+        </header>
+
+        <div class="testi__grid">
+          <blockquote class="quote reveal" data-reveal>
+            <svg class="ico quote__mark"><use href="#i-quote"></use></svg>
+            <p>Necesitaba liquidez para mi negocio y no quería vender mi apartamento. En M&amp;S me explicaron todo con claridad y en pocos días tenía el desembolso.</p>
+            <footer><span class="quote__name">Andrés M.</span><span class="quote__role">Comerciante · Crédito</span></footer>
+          </blockquote>
+          <blockquote class="quote reveal" data-reveal data-reveal-delay="100">
+            <svg class="ico quote__mark"><use href="#i-quote"></use></svg>
+            <p>Buscaba dónde colocar mis ahorros con respaldo real. Me mostraron la garantía, los documentos y hoy mi capital genera una renta estable.</p>
+            <footer><span class="quote__name">Claudia R.</span><span class="quote__role">Inversionista</span></footer>
+          </blockquote>
+          <blockquote class="quote reveal" data-reveal data-reveal-delay="200">
+            <svg class="ico quote__mark"><use href="#i-quote"></use></svg>
+            <p>Lo que más valoro es la transparencia. Todo quedó firmado ante notaría y siempre supe en qué etapa iba mi proceso.</p>
+            <footer><span class="quote__name">Jorge L.</span><span class="quote__role">Propietario · Crédito</span></footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="section faq" id="faq">
+      <div class="container faq__inner">
+        <header class="section__head section__head--left reveal" data-reveal>
+          <p class="eyebrow"><span class="eyebrow__dot"></span>Preguntas frecuentes</p>
+          <h2 class="section__title">Resolvemos<br />tus dudas</h2>
+          <p class="section__sub">¿Tienes otra pregunta? Escríbenos y te respondemos sin compromiso.</p>
+          <a href="#contacto" class="btn btn--ghost btn--dark-ghost">
+            <svg class="ico"><use href="#i-whatsapp"></use></svg><span>Hablar con un asesor</span>
+          </a>
+        </header>
+
+        <div class="faq__list">
+          <details class="acc reveal" data-reveal>
+            <summary>¿Pierdo mi inmueble al solicitar el crédito?<svg class="ico"><use href="#i-plus"></use></svg></summary>
+            <div class="acc__body"><p>No. Tu inmueble queda únicamente como <strong>garantía hipotecaria</strong>; sigues siendo el propietario y conservas su uso mientras cumples con las condiciones acordadas.</p></div>
+          </details>
+          <details class="acc reveal" data-reveal data-reveal-delay="60">
+            <summary>¿Cuánto dinero puedo obtener?<svg class="ico"><use href="#i-plus"></use></svg></summary>
+            <div class="acc__body"><p>El monto depende del avalúo comercial de tu propiedad. Por lo general se financia <strong>hasta el 60%</strong> del valor del inmueble, definido tras el estudio.</p></div>
+          </details>
+          <details class="acc reveal" data-reveal data-reveal-delay="120">
+            <summary>¿Cómo se protege mi dinero si invierto?<svg class="ico"><use href="#i-plus"></use></svg></summary>
+            <div class="acc__body"><p>Cada inversión se respalda con una <strong>hipoteca sobre un bien raíz</strong>, formalizada ante notaría. Antes de colocar tu capital revisamos la garantía y su situación legal.</p></div>
+          </details>
+          <details class="acc reveal" data-reveal data-reveal-delay="180">
+            <summary>¿Aparezco reportado en centrales de riesgo?<svg class="ico"><use href="#i-plus"></use></svg></summary>
+            <div class="acc__body"><p>Estudiamos cada caso de forma integral. Al tratarse de un crédito con garantía real, el historial en centrales no es el único factor de la decisión.</p></div>
+          </details>
+          <details class="acc reveal" data-reveal data-reveal-delay="240">
+            <summary>¿Cuánto tarda el proceso?<svg class="ico"><use href="#i-plus"></use></svg></summary>
+            <div class="acc__body"><p>Depende de la documentación del inmueble, pero nuestros procesos son <strong>ágiles</strong>: una vez completado el estudio y la firma, el desembolso es rápido.</p></div>
+          </details>
+          <details class="acc reveal" data-reveal data-reveal-delay="300">
+            <summary>¿Tiene algún costo la asesoría inicial?<svg class="ico"><use href="#i-plus"></use></svg></summary>
+            <div class="acc__body"><p>No. La primera asesoría es <strong>gratuita y sin compromiso</strong>. Queremos que entiendas tus opciones antes de tomar cualquier decisión.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA / CONTACTO ============ -->
+    <section class="section contact" id="contacto">
+      <div class="container contact__inner">
+        <div class="contact__info reveal" data-reveal>
+          <p class="eyebrow"><span class="eyebrow__dot"></span>Hablemos</p>
+          <h2 class="section__title">Da el primer paso<br />hacia tu tranquilidad financiera</h2>
+          <p class="section__sub">Cuéntanos qué necesitas y un asesor de M&amp;S te contactará. Sin compromiso y con total confidencialidad.</p>
+
+          <ul class="contact__list">
+            <li><svg class="ico"><use href="#i-whatsapp"></use></svg>
+              <a href="https://wa.me/573163524208" target="_blank" rel="noopener">+57 316 352 4208 <small>· WhatsApp</small></a></li>
+            <li><svg class="ico"><use href="#i-mail"></use></svg>
+              <a href="mailto:contacto@asesoriams.com">contacto@asesoriams.com</a></li>
+            <li><svg class="ico"><use href="#i-pin"></use></svg>
+              <span>Colombia · Atención presencial y virtual</span></li>
+          </ul>
+        </div>
+
+        <form class="contact__form reveal" data-reveal data-reveal-delay="120" id="leadForm" novalidate>
+          <div class="field">
+            <label for="fName">Nombre completo</label>
+            <input type="text" id="fName" name="name" required placeholder="Tu nombre" autocomplete="name" />
+          </div>
+          <div class="field">
+            <label for="fPhone">Teléfono / WhatsApp</label>
+            <input type="tel" id="fPhone" name="phone" required placeholder="Ej: 300 000 0000" autocomplete="tel" inputmode="tel" />
+          </div>
+          <div class="field">
+            <span class="field__label">Me interesa</span>
+            <div class="seg" role="radiogroup" aria-label="Me interesa">
+              <input type="radio" name="interest" id="iCredito" value="Crédito con garantía" checked />
+              <label for="iCredito">Un crédito</label>
+              <input type="radio" name="interest" id="iInversion" value="Inversión en hipotecas" />
+              <label for="iInversion">Invertir</label>
+            </div>
+          </div>
+          <div class="field">
+            <label for="fMsg">Mensaje <small>(opcional)</small></label>
+            <textarea id="fMsg" name="message" rows="3" placeholder="Cuéntanos brevemente tu caso…"></textarea>
+          </div>
+          <button type="submit" class="btn btn--gold btn--block btn--lg">
+            <svg class="ico"><use href="#i-whatsapp"></use></svg>
+            <span>Enviar por WhatsApp</span>
+          </button>
+          <p class="contact__legal">Al enviar aceptas ser contactado por un asesor de M&amp;S. No compartimos tus datos con terceros.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="#inicio" class="brand brand--footer">
+          <svg class="brand__emblem" viewBox="0 0 64 64"><use href="#ms-emblem"></use></svg>
+          <span class="brand__text">
+            <span class="brand__name">M<i>&amp;</i>S</span>
+            <span class="brand__sub">Asesoría Financiera</span>
+          </span>
+        </a>
+        <p class="footer__tagline">Crédito con garantía e inversión con respaldo inmobiliario.
+          Conectamos liquidez y capital con la solidez de la finca raíz.</p>
+      </div>
+
+      <nav class="footer__col" aria-label="Soluciones">
+        <h4>Soluciones</h4>
+        <a href="#credito">Crédito con garantía</a>
+        <a href="#inversion">Inversión en hipotecas</a>
+        <a href="#calculadora">Simulador</a>
+      </nav>
+
+      <nav class="footer__col" aria-label="Compañía">
+        <h4>Compañía</h4>
+        <a href="#porque">Por qué M&amp;S</a>
+        <a href="#proceso">Cómo funciona</a>
+        <a href="#faq">Preguntas frecuentes</a>
+      </nav>
+
+      <div class="footer__col">
+        <h4>Contacto</h4>
+        <a href="https://wa.me/573163524208" target="_blank" rel="noopener"><svg class="ico"><use href="#i-whatsapp"></use></svg> WhatsApp</a>
+        <a href="mailto:contacto@asesoriams.com"><svg class="ico"><use href="#i-mail"></use></svg> Correo</a>
+      </div>
+    </div>
+
+    <div class="container footer__bottom">
+      <p>© <span id="year">2026</span> Asesoría Financiera M&amp;S. Todos los derechos reservados.</p>
+      <p class="footer__disclaimer">Las cifras y rentabilidades mostradas son ilustrativas y no constituyen una oferta vinculante.
+        Cada operación está sujeta a estudio y formalización legal.</p>
+    </div>
+  </footer>
+
+  <!-- Botón flotante WhatsApp -->
+  <a href="https://wa.me/573163524208" class="fab" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+    <svg class="ico"><use href="#i-whatsapp"></use></svg>
+  </a>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
