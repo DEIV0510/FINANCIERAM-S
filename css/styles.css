@@ -569,6 +569,50 @@ input[type=range]::-moz-range-thumb{ width:24px; height:24px; border-radius:50%;
 }
 
 /* =========================================================
+   MÓVIL: listas de tarjetas → carrusel horizontal (deslizar)
+   ========================================================= */
+@media (max-width:640px){
+  .why__grid,
+  .asset-grid,
+  .testi__grid,
+  .steps{
+    display:flex;
+    flex-wrap:nowrap;
+    max-width:none;
+    overflow-x:auto;
+    gap:14px;
+    margin-inline:-20px;
+    padding:6px 20px 20px;
+    scroll-snap-type:x mandatory;
+    scroll-padding-left:20px;
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:none;
+  }
+  .why__grid::-webkit-scrollbar,
+  .asset-grid::-webkit-scrollbar,
+  .testi__grid::-webkit-scrollbar,
+  .steps::-webkit-scrollbar{ display:none; }
+
+  /* tarjetas: visibles, con ancho que deja "asomar" la siguiente */
+  .why__grid > *,
+  .asset-grid > *,
+  .testi__grid > *,
+  .steps > *{
+    scroll-snap-align:start;
+    flex:0 0 auto;
+    opacity:1;
+    transform:none;
+  }
+  .why__grid > .feature{ width:74%; }
+  .steps > .step{ width:66%; }
+  .testi__grid > .quote{ width:84%; }
+  .asset-grid > .asset{ width:40%; }
+
+  /* el conector de pasos ya está oculto; sin línea punteada en carrusel */
+  .steps::before{ display:none; }
+}
+
+/* =========================================================
    REDUCED MOTION
    ========================================================= */
 @media (prefers-reduced-motion:reduce){
