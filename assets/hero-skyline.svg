@@ -1,0 +1,57 @@
+<svg viewBox="0 0 1440 240" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMax slice" role="img" aria-label="Silueta de edificios e inmuebles">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#c2a15a" stop-opacity="0.75"/>
+      <stop offset="0.65" stop-color="#c2a15a" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#c2a15a" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="win" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f0d99a" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#f0d99a" stop-opacity="0.2"/>
+    </linearGradient>
+  </defs>
+
+  <g fill="url(#sky)">
+    <rect x="0" y="118" width="92" height="122"/>
+    <rect x="96" y="64" width="64" height="176"/>
+    <rect x="150" y="150" width="116" height="90"/>
+    <rect x="276" y="98" width="58" height="142"/>
+    <rect x="300" y="44" width="6" height="58"/>
+    <rect x="338" y="156" width="128" height="84"/>
+    <rect x="470" y="58" width="78" height="182"/>
+    <rect x="552" y="128" width="104" height="112"/>
+
+    <!-- casa con techo (inmueble residencial) -->
+    <path d="M664 240 V150 L728 108 L792 150 V240 Z"/>
+    <path d="M650 152 L728 100 L806 152 L792 152 L728 112 L664 152 Z"/>
+
+    <rect x="812" y="92" width="92" height="148"/>
+    <rect x="912" y="150" width="138" height="90"/>
+    <rect x="1056" y="70" width="70" height="170"/>
+    <rect x="1086" y="48" width="6" height="30"/>
+    <rect x="1136" y="138" width="110" height="102"/>
+    <rect x="1256" y="100" width="84" height="140"/>
+    <rect x="1348" y="148" width="92" height="92"/>
+  </g>
+
+  <!-- ventanas (luces) -->
+  <g fill="url(#win)">
+    <rect x="110" y="84" width="8" height="12"/><rect x="126" y="84" width="8" height="12"/><rect x="142" y="84" width="8" height="12"/>
+    <rect x="110" y="108" width="8" height="12"/><rect x="126" y="108" width="8" height="12"/><rect x="142" y="108" width="8" height="12"/>
+    <rect x="110" y="132" width="8" height="12"/><rect x="126" y="132" width="8" height="12"/><rect x="142" y="132" width="8" height="12"/>
+
+    <rect x="486" y="80" width="9" height="13"/><rect x="506" y="80" width="9" height="13"/><rect x="526" y="80" width="9" height="13"/>
+    <rect x="486" y="106" width="9" height="13"/><rect x="506" y="106" width="9" height="13"/><rect x="526" y="106" width="9" height="13"/>
+    <rect x="486" y="132" width="9" height="13"/><rect x="506" y="132" width="9" height="13"/><rect x="526" y="132" width="9" height="13"/>
+
+    <rect x="828" y="112" width="8" height="12"/><rect x="846" y="112" width="8" height="12"/><rect x="864" y="112" width="8" height="12"/><rect x="882" y="112" width="8" height="12"/>
+    <rect x="828" y="136" width="8" height="12"/><rect x="846" y="136" width="8" height="12"/><rect x="864" y="136" width="8" height="12"/><rect x="882" y="136" width="8" height="12"/>
+
+    <rect x="1072" y="92" width="9" height="13"/><rect x="1094" y="92" width="9" height="13"/>
+    <rect x="1072" y="118" width="9" height="13"/><rect x="1094" y="118" width="9" height="13"/>
+    <rect x="1072" y="144" width="9" height="13"/><rect x="1094" y="144" width="9" height="13"/>
+
+    <rect x="1272" y="120" width="8" height="12"/><rect x="1290" y="120" width="8" height="12"/><rect x="1308" y="120" width="8" height="12"/>
+    <rect x="1272" y="144" width="8" height="12"/><rect x="1290" y="144" width="8" height="12"/><rect x="1308" y="144" width="8" height="12"/>
+  </g>
+</svg>

@@ -247,6 +247,9 @@ ul{ list-style:none; }
   background-image:linear-gradient(rgba(246,242,234,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(246,242,234,.04) 1px,transparent 1px);
   background-size:60px 60px; mask-image:radial-gradient(ellipse 80% 70% at 50% 40%,#000 30%,transparent 75%);
 }
+.hero__skyline{ position:absolute; left:0; right:0; bottom:0; width:100%; height:auto; opacity:.42; pointer-events:none;
+  -webkit-mask-image:linear-gradient(to top, #000 40%, transparent 92%);
+  mask-image:linear-gradient(to top, #000 40%, transparent 92%); }
 
 .hero__inner{ position:relative; z-index:2; display:grid; grid-template-columns:1.1fr .9fr; gap:60px; align-items:center; width:100%; }
 
