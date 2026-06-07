@@ -81,11 +81,8 @@ ul{ list-style:none; }
 }
 .preloader.is-done{ opacity:0; visibility:hidden; }
 .preloader__mark{ text-align:center; }
-.preloader__card{ display:inline-block; background:var(--ivory); border-radius:22px; padding:32px 40px;
-  border:1px solid rgba(194,161,90,.35); box-shadow:0 40px 90px -30px rgba(0,0,0,.7);
-  animation:cardIn 1s var(--ease) both; }
-.preloader__card img{ width:180px; height:auto; display:block; }
-.preloader__line{ width:140px; height:2px; background:rgba(255,255,255,.14); margin:26px auto 0; overflow:hidden; }
+.preloader__logo{ width:240px; max-width:68vw; height:auto; display:inline-block; animation:cardIn 1s var(--ease) both; }
+.preloader__line{ width:140px; height:2px; background:rgba(255,255,255,.14); margin:30px auto 0; overflow:hidden; }
 .preloader__line span{ display:block; height:100%; width:100%; background:linear-gradient(90deg,var(--gold-deep),var(--gold-bright));
   transform:translateX(-100%); animation:loadBar 1.4s var(--ease) .2s forwards; }
 @keyframes cardIn{ from{ opacity:0; transform:translateY(14px) scale(.94);} to{ opacity:1; transform:none;} }
@@ -147,10 +144,10 @@ ul{ list-style:none; }
 
 /* Brand */
 .brand{ display:inline-flex; align-items:center; gap:12px; }
-.brand__logo{ width:46px; height:46px; flex:none; border-radius:12px; background:var(--ivory); padding:5px;
-  display:grid; place-items:center; box-shadow:inset 0 0 0 1px rgba(194,161,90,.3); transition:transform .5s var(--ease), box-shadow .5s; }
-.brand__logo img{ width:100%; height:100%; object-fit:contain; }
-.brand:hover .brand__logo{ transform:scale(1.05); box-shadow:inset 0 0 0 1px rgba(194,161,90,.55); }
+.brand__logo{ flex:none; display:inline-flex; align-items:center; transition:transform .5s var(--ease); }
+.brand__logo img{ height:46px; width:auto; display:block; object-fit:contain; }
+.brand:hover .brand__logo{ transform:scale(1.05); }
+.brand--footer .brand__logo img{ height:42px; }
 .brand__text{ display:flex; flex-direction:column; line-height:1; }
 .brand__name{ font-family:var(--serif); font-size:25px; font-weight:600; color:var(--ivory); letter-spacing:.02em; }
 .brand__name i{ color:var(--gold); font-style:italic; }
