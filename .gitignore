@@ -14,6 +14,7 @@ npm-debug.log*
 package.json
 package-lock.json
 process-logo.js
+process-image.js
 
 # Logs y temporales
 *.log
