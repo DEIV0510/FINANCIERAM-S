@@ -13,15 +13,16 @@
   --navy-500:#1b3a5c;
   --ink:#0e1b2a;
   --ink-soft:#3a4a5c;
-  --muted:#647688;
+  --muted:#586979;
 
   --gold:#c2a15a;
   --gold-bright:#e3c485;
   --gold-deep:#a8843f;
   --gold-soft:#efe3c6;
 
-  --ivory:#efe8da;
-  --cream:#f5efe3;
+  --ivory:#f6f2ea;
+  --cream:#efe7d6;
+  --sand:#e8dfcd;
   --white:#ffffff;
 
   --line:rgba(14,27,42,.10);
@@ -401,7 +402,7 @@ ul{ list-style:none; }
 /* =========================================================
    PROCESS / STEPS
    ========================================================= */
-.process{ background:var(--ivory); }
+.process{ background:var(--sand); }
 .steps{ display:grid; grid-template-columns:repeat(4,1fr); gap:24px; counter-reset:step; position:relative; }
 .steps::before{ content:""; position:absolute; top:30px; left:6%; right:6%; height:1px; background:repeating-linear-gradient(90deg,var(--line) 0 8px,transparent 8px 16px); z-index:0; }
 .step{ position:relative; z-index:1; padding:8px 6px; }
@@ -439,7 +440,7 @@ ul{ list-style:none; }
 /* =========================================================
    CALCULADORA
    ========================================================= */
-.calc{ background:var(--ivory); }
+.calc{ background:var(--sand); }
 .calc__inner{ display:grid; grid-template-columns:1fr 1fr; gap:clamp(40px,6vw,80px); align-items:center; }
 .calc__intro .section__title{ margin-top:16px; }
 .calc__notes{ display:flex; flex-direction:column; gap:12px; margin-top:26px; }
@@ -488,7 +489,7 @@ input[type=range]::-moz-range-thumb{ width:24px; height:24px; border-radius:50%;
 /* =========================================================
    TESTIMONIOS
    ========================================================= */
-.testi{ background:var(--ivory); }
+.testi{ background:var(--sand); }
 .testi__grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
 .quote{ position:relative; background:var(--white); border:1px solid var(--line); border-radius:var(--radius); padding:34px 30px 28px; box-shadow:var(--shadow-sm); transition:transform .5s var(--ease), box-shadow .5s; }
 .quote:hover{ transform:translateY(-6px); box-shadow:var(--shadow); }
